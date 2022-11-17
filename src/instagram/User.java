@@ -17,7 +17,7 @@ public class User extends AbstractUser {
     }
 
     public void display() {
-        System.out.println("****************************************");
+        System.out.println(". . . . . . . . . . . . . . . . . . . . .");
         System.out.println("User: " + getUsername());
 
         int postCount = 0;
@@ -37,15 +37,15 @@ public class User extends AbstractUser {
             if (following.isActive())
                 followingCount++;
         }
-        System.out.println("Posts: " + postCount + ", followers: " + followersCount + ", following: " + followingCount);
+        System.out.println("Posts: " + postCount + "   followers: " + followersCount + "   following: " + followingCount);
 
-        System.out.println("****************************************");
+        System.out.println(". . . . . . . . . . . . . . . . . . . . .");
 
         for (Post post : getPosts()) {
             if (post.isActive())
                 post.display();
         }
-        System.out.println("****************************************");
+        System.out.println(". . . . . . . . . . . . . . . . . . . . .");
     }
 
     public Post createPost(String caption, String contents) {
