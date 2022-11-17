@@ -50,6 +50,7 @@ public class User extends AbstractUser {
     public Post createPost(String caption, String contents) {
         Calendar cal = Calendar.getInstance();
         Post post = new Post();
+        post.setOwner(this);
         post.setCaption(caption);
         post.setContents(contents);
         post.setActive(true);
@@ -67,15 +68,18 @@ public class User extends AbstractUser {
         }
     }
 
-    public void likePost(Post post) {
+    public Like likePost(Post post) {
         Like like = new Like(post, this);
 
         post.getLikes().add(like);
+
+        return like;
     }
 
-    public void addComment(Post post, String comment) {
+    public Comment addComment(Post post, String comment) {
         Comment c = new Comment(post, this, comment);
         post.getComments().add(c);
+        return c;
     }
 
     public void follow(User user) {

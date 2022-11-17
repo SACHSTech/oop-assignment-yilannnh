@@ -13,22 +13,21 @@ public class Instagram {
         Post post = user1.createPost("I got a new cat guys ^_^", "Soooo cutee! What should I name her??");
 
         user2.likePost(post);
-        Comment user2Comment = new Comment();
-        user2.addComment(post, user2Comment);
+        user2.addComment(post, "That is a cool cat. You should name her Mittens!");
         user2.follow(user1);
 
-        Comment user3Comment = new Comment();
-        user3.addComment(post, user3Comment);
+        Comment user3comment = user3.addComment(post, "What a stupid looking cat. You need to return it to the shelter ASAP >:(");
         user3.follow(user1);
 
+        System.out.println(">>> Initial post");
         user1.display();
 
-        mod1.suspendComment(user3Comment);
-
+        System.out.println(">>> Inappropriate comment suspended");
+        mod1.suspendComment(user3comment);
         user1.display();
 
+        System.out.println(">>> Inappropriate user suspended");
         mod1.suspendUser(user3);
-
         user1.display();
     }
 }
