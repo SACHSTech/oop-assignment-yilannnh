@@ -1,5 +1,6 @@
 package instagram;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Like {
@@ -14,6 +15,9 @@ public class Like {
     public Like(Post post, User user) {
         this.post = post;
         this.user = user;
+
+        Calendar cal = Calendar.getInstance();
+        this.likeDateTime = cal.getTime();
     }
 
     public Post getPost() {
