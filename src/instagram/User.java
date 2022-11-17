@@ -18,7 +18,7 @@ public class User extends AbstractUser {
 
     public void display() {
         System.out.println("****************************************");
-        System.out.println(getUsername());
+        System.out.println("User: " + getUsername());
 
         int postCount = 0;
         for (Post post : getPosts()) {

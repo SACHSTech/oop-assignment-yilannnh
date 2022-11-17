@@ -22,12 +22,21 @@ public class Instagram {
         System.out.println(">>> Initial post");
         user1.display();
 
+        System.out.println(">>> User1 follows user2 as well, reload page");
+        user1.follow(user2);
+        user1.display();
+
         System.out.println(">>> Inappropriate comment suspended, reload page");
         mod1.suspendComment(user3comment);
         user1.display();
 
         System.out.println(">>> Inappropriate user suspended, reload page");
         mod1.suspendUser(user3);
+        user1.display();
+
+        System.out.println(">>> User posted again, reload page");
+        Post post2 = user1.createPost("Computer science is the future!", "Thank you for teaching us Mr. Fabroa!");
+        user2.likePost(post2);
         user1.display();
     }
 }

@@ -71,10 +71,10 @@ public class Post {
     }
 
     public void display() {
-        System.out.println(owner.getUsername() + " posted " + getCaption() + " at " + getPostDateTime());
+        System.out.println(owner.getUsername() + " posted [" + getCaption() + "] at " + getPostDateTime());
 
         System.out.println(getContents());
-        System.out.print("Likes: ");
+        System.out.print("Likes <3: ");
         for (Like like : likes) {
             System.out.print(like.getUser().getUsername() + " ");
         }
