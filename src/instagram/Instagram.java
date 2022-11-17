@@ -22,11 +22,11 @@ public class Instagram {
         System.out.println(">>> Initial post");
         user1.display();
 
-        System.out.println(">>> Inappropriate comment suspended");
+        System.out.println(">>> Inappropriate comment suspended, reload page");
         mod1.suspendComment(user3comment);
         user1.display();
 
-        System.out.println(">>> Inappropriate user suspended");
+        System.out.println(">>> Inappropriate user suspended, reload page");
         mod1.suspendUser(user3);
         user1.display();
     }

@@ -13,6 +13,7 @@ public class User extends AbstractUser {
 
     public User(String username) {
         setUsername(username);
+        this.active = true;
     }
 
     public void display() {

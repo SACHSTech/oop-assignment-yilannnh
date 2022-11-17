@@ -15,6 +15,7 @@ public class Comment {
     }
 
     public Comment(Post post, User user, String text) {
+        this.active = true;
         this.post = post;
         this.user = user;
         this.text = text;
