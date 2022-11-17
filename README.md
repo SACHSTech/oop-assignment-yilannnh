@@ -3,7 +3,7 @@
 
 [*see instructions for details*](Instructions.md)
 
-*Insert Class Diagram here*  
+<img src="oop-classdiagram.jpg"/>
 
 ## Summary
 *Include a brief summary that describes your system that your are modelling*
