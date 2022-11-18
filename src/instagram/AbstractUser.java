@@ -2,6 +2,9 @@ package instagram;
 
 import java.util.Date;
 
+/**
+ * Presents an abstract user in Instagram. 
+ */
 abstract class AbstractUser{
     private String username;
     private String email;
@@ -45,6 +48,6 @@ abstract class AbstractUser{
     }
 
     public void signOut() {
-        
+
     }
 }

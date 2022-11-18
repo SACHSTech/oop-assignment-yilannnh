@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Represents a Post.
+ */
 public class Post {
     private boolean active;
     private User owner;

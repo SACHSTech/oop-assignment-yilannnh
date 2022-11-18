@@ -3,6 +3,9 @@ package instagram;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * Presents a Like on a Post.
+ */
 public class Like {
     private Post post;
     private User user;

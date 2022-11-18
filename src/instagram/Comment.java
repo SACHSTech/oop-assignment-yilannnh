@@ -3,6 +3,9 @@ package instagram;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * A comment on an existing Post.
+ */
 public class Comment {
     private boolean active;
     private Post post;

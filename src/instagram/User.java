@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+/**
+ * A regular user who can post in Instagram.
+ */
 public class User extends AbstractUser {
     private boolean active;
     private String profilePictureUrl;
@@ -16,7 +19,7 @@ public class User extends AbstractUser {
         this.active = true;
     }
 
-    public void display() {
+    public void displayProfile() {
         System.out.println(". . . . . . . . . . . . . . . . . . . . .");
         System.out.println("User: " + getUsername());
 
@@ -42,10 +45,11 @@ public class User extends AbstractUser {
         System.out.println(". . . . . . . . . . . . . . . . . . . . .");
 
         for (Post post : getPosts()) {
-            if (post.isActive())
+            if (post.isActive()) {
                 post.display();
+                System.out.println(". . . . . . . . . . . . . . . . . . . . .");
+            }
         }
-        System.out.println(". . . . . . . . . . . . . . . . . . . . .");
     }
 
     public Post createPost(String caption, String contents) {
