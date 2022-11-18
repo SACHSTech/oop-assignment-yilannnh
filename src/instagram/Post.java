@@ -73,18 +73,21 @@ public class Post {
     public void display() {
         System.out.println(owner.getUsername() + " posted [" + getCaption() + "] at " + getPostDateTime());
 
-        System.out.println(getContents());
+        System.out.println("\"" + getContents() + "\"");
+        System.out.println("");
         System.out.print("Likes <3: ");
+        
         for (Like like : likes) {
             System.out.print(like.getUser().getUsername() + " ");
         }
 
         System.out.println("");
+        System.out.println("");
 
         for (Comment comment : comments) {
             if (comment.isActive()) {
                 System.out.print(comment.getUser().getUsername() + " commented at " + comment.getCommentDateTime() + ": ");
-                System.out.println(comment.getText());    
+                System.out.println("\"" + comment.getText() + "\"");    
             }
         }
     }
