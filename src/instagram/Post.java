@@ -16,7 +16,7 @@ public class Post {
     private List<Like> likes = new ArrayList<Like>();
     private List<Comment> comments = new ArrayList<Comment>();
 
-
+    // Getter and setter methods
     public boolean isActive() {
         return this.active;
     }
@@ -76,10 +76,12 @@ public class Post {
     public void display() {
         System.out.println(owner.getUsername() + " posted [" + getCaption() + "] at " + getPostDateTime());
 
+        // Contents of post
         System.out.println("\"" + getContents() + "\"");
         System.out.println("");
         System.out.print("Likes <3: ");
         
+        // Who liked the post?
         for (Like like : likes) {
             System.out.print(like.getUser().getUsername() + " ");
         }
@@ -87,6 +89,7 @@ public class Post {
         System.out.println("");
         System.out.println("");
 
+        // Shows a comment and the date and time
         for (Comment comment : comments) {
             if (comment.isActive()) {
                 System.out.print(comment.getUser().getUsername() + " commented at " + comment.getCommentDateTime() + ": ");

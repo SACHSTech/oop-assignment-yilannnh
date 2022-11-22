@@ -9,6 +9,7 @@ public class InstagramDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // Different users and their usernames
         Moderator mod1 = new Moderator();
         User user1 = new User("_catlover445_");
 
@@ -16,15 +17,18 @@ public class InstagramDemo {
 
         User user3 = new User("4n1m4l_h4t3rz");
 
+        // Introduction
         System.out.println("This program simulates a few Instagram use cases, press Enter to continue.");
         scanner.nextLine();
 
+        // Post created
         Post post = user1.createPost("I got a new cat guys ^_^", "Soooo cutee! What should I name her??");
 
         user1.displayProfile();
         System.out.println("Above is a new post by user " + user1.getUsername() + ", press Enter to see some likes and comments by other users.");
         scanner.nextLine();
 
+        // Comments and follows
         user2.likePost(post);
         user2.addComment(post, "That is a cool cat. You should name her Mittens!");
         user2.follow(user1);
@@ -36,18 +40,21 @@ public class InstagramDemo {
         System.out.println("The post has received likes and comments and the user has got followers, press Enter to see the user follow other users.");
         scanner.nextLine();        
 
+        // User has gained followers
         user1.follow(user2);
         user1.displayProfile();
 
         System.out.println(user1.getUsername() + " is now following " + user2.getUsername() + ", press Enter to see the mod suspend an inappropriate commment.");
-        scanner.nextLine();        
+        scanner.nextLine(); 
 
+        // Moderator suspends a commnent; it is no longer visible
         mod1.suspendComment(user3comment);
         user1.displayProfile();
 
         System.out.println("The inappropriate comment is no longer visible, press Enter to see the mod suspend " + user3.getUsername() + " as well.");
         scanner.nextLine();
-
+        
+        // Moderator suspends a user; user is no longer shown in followers
         mod1.suspendUser(user3);
         user1.displayProfile();
 
